@@ -1,14 +1,13 @@
 import './CardMonth.css';
 import $ from 'jquery';
-import laranja from '../../resources/img/laranja.jpg';
 
 function CardMonth(props) {
   return (
     <section className='month-card'>
-        <h1 className='month-title'>Janeiro</h1>
+        <h1 className='month-title'>{props.card.month}</h1>
         <div className='display-center-center'>
-          <img src={laranja} className="logo-month"/>
-          <p>Janeiro Branco é um alerta sobre a saúde mental</p>
+          <img src={props.card.img} className="logo-month"/>
+          <p>{props.card.textTitle}</p>
         </div>
     </section>
   );
